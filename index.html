@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dior Next Chapter · 礼遇开篇</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@200;300;400;500&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="login-wrap">
+    <header class="login-head">
+      <div class="brand">Dior · <em>Next Chapter</em></div>
+      <div class="login-motto">人生每一次翻页，Dior 都在你身边</div>
+    </header>
+
+    <section class="login-main">
+      <div>
+        <div class="login-title">
+          <p class="eyebrow">Privé · 私人礼遇入口</p>
+          <h1 class="h1">翻开，你的下一章</h1>
+          <p class="lede center">请选择最贴近此刻状态的方式，进入专属于你的 Dior 私人服务章节。我们会以同等克制与郑重的方式，迎接每一位来访者。</p>
+        </div>
+
+        <div class="entry-grid">
+          <!-- 卡片 1：已购买产品 -->
+          <div class="entry-card">
+            <div class="num">Chapitre I</div>
+            <span class="tag">已购臻境仪</span>
+            <h3 class="h3">持专属编码，开始建档</h3>
+            <p class="hint">已在 Dior 精品店或官方渠道购入 Dior 臻境仪？请输入包装内附的专属编码，直接进入 AI 建档，领取你的第一章礼遇。</p>
+            <form class="entry-form" id="form-purchased">
+              <input type="text" class="field" placeholder="请输入您 Dior 臻境仪 包装内附的专属编码" required />
+              <button type="submit" class="btn btn-fill">
+                <span>进入 AI 建档</span><span class="arrow">→</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- 卡片 2：尚未购买 -->
+          <div class="entry-card">
+            <div class="num">Chapitre II</div>
+            <span class="tag">会员礼遇同步</span>
+            <h3 class="h3">以 Dior 会员身份进入</h3>
+            <p class="hint">尚未入手臻境仪？输入手机号与 Dior 会员积分系统同步，我们将为您呈现匹配当前会员等级的专属推荐方案。</p>
+            <form class="entry-form" id="form-member">
+              <input type="tel" class="field" placeholder="请输入您预留于 Dior 会员系统的手机号" pattern="[0-9]{11}" required />
+              <button type="submit" class="btn">
+                <span>核对会员积分</span><span class="arrow">→</span>
+              </button>
+              <div class="loader" id="member-loader">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span>正在为您核对 Dior 会员积分…</span>
+              </div>
+            </form>
+          </div>
+
+          <!-- 卡片 3：游客体验 -->
+          <div class="entry-card">
+            <div class="num">Chapitre III</div>
+            <span class="tag">访客体验</span>
+            <h3 class="h3">以游客身份体验</h3>
+            <p class="hint">希望先完整浏览 Dior Next Chapter 的陪伴旅程？以游客身份开启预览，感受从首页到购买页的每一个章节。</p>
+            <button type="button" class="btn btn-gold" id="btn-guest">
+              <span>以游客身份体验</span><span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="login-foot">
+      © Dior Next Chapter · Private Beauty Service — Maison Christian Dior
+    </footer>
+  </div>
+
+  <script>
+    // 卡片一：已购产品 → 跳转 AI 建档
+    document.getElementById('form-purchased').addEventListener('submit', function (e) {
+      e.preventDefault();
+      sessionStorage.setItem('dnc_tier', 'owner');
+      sessionStorage.setItem('dnc_code', this.querySelector('input').value);
+      window.location.href = 'ai-profile.html';
+    });
+
+    // 卡片二：会员 → 模拟积分匹配 → 跳转购买页
+    const memForm = document.getElementById('form-member');
+    const memLoader = document.getElementById('member-loader');
+    memForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      memLoader.classList.add('show');
+      // 根据手机号末位随机出一个会员等级
+      setTimeout(() => {
+        const phone = this.querySelector('input').value || '';
+        const last = parseInt(phone.slice(-1), 10);
+        let tier = 'gold';
+        if (last >= 0 && last <= 3) tier = 'gold';       // 鎏金
+        else if (last <= 6) tier = 'rosegold';            // 玫瑰金
+        else tier = 'platinum';                           // 铂金
+        sessionStorage.setItem('dnc_tier', tier);
+        sessionStorage.setItem('dnc_phone', phone);
+        window.location.href = 'purchase.html?tier=' + tier;
+      }, 1800);
+    });
+
+    // 卡片三：游客 → 首页
+    document.getElementById('btn-guest').addEventListener('click', function () {
+      sessionStorage.setItem('dnc_tier', 'guest');
+      window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+﻿node_modules/
+.DS_Store
+.tools/
+serveo-tunnel.log
+.cf-tunnel.log
+*.log
+Thumbs.db

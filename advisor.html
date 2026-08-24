@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dior Next Chapter · 真人顾问</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@200;300;400;500&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="home.html" class="brand">Dior · <em>Next Chapter</em></a>
+      <ul class="nav-links">
+        <li><a href="home.html">首页</a></li>
+        <li><a href="ai-profile.html">AI 建档</a></li>
+        <li><a href="advisor.html" class="active">真人顾问</a></li>
+        <li><a href="purchase.html">购买</a></li>
+        <li><a href="tracker.html">服务追踪</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-head">
+    <div class="container">
+      <p class="eyebrow">Personal Advisor · 专属真人顾问</p>
+      <h1 class="h1">终于，让你和顾问见面</h1>
+      <p class="lede center">根据你刚刚写下的章节，我们为你匹配了一位长期陪伴的专属顾问。顾问会读完你的档案，再亲手写下第一章推荐。</p>
+    </div>
+  </div>
+
+  <section class="section-sm">
+    <div class="container">
+
+      <!-- 顾问匹配卡 -->
+      <div class="match-card">
+        <div class="avatar" style="background: radial-gradient(circle at 30% 30%, #D8CBB0, #6B5C3F 70%);"></div>
+        <div class="match-info">
+          <p class="eyebrow">Matched Advisor</p>
+          <h2 class="h2">陆承舟 · Lu Chengzhou</h2>
+          <div class="role">Dior Homme 资深私人顾问 · 从业 9 年</div>
+          <p>
+            毕业于巴黎索邦大学艺术史，曾任职 Dior 蒙田 Homme 专区。
+            深谙男士护肤的"克制即秩序"哲学，擅长陪伴晋升 / 迁居 / 新婚 / 初为人父等人生转折章节。
+          </p>
+          <p style="color: var(--muted); font-size: 14px;">
+            顾问寄语：<em style="font-family: var(--serif);">「一位男士的风格，不在他买了什么，而在他日复一日坚持了什么。我愿意陪你，把日常写成诗。」</em>
+          </p>
+          <div class="tags">
+            <span>男士肌肤管理</span>
+            <span>晋升 / 公开亮相</span>
+            <span>迁居海外陪伴</span>
+            <span>中 / 法 / 英 语</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 沟通方式 -->
+      <div style="max-width:900px; margin:0 auto 30px;">
+        <p class="eyebrow center" style="margin-bottom: 30px;">Chapter · First Meeting</p>
+        <h3 class="h3 center" style="margin-bottom: 24px;">请选择第一次沟通的方式</h3>
+        <p class="lede center" style="margin: 0 auto 40px;">无论哪一种，顾问都会带着你的完整档案与你见面。这一次，只谈你。</p>
+      </div>
+
+      <div class="dual-opt">
+        <div class="opt" id="opt-vid">
+          <div class="mark">V</div>
+          <h4>线上视频沟通</h4>
+          <p>45 分钟的一对一视频会议。顾问为你讲解档案要点，并现场给出初步方案建议。</p>
+        </div>
+        <div class="opt" id="opt-store">
+          <div class="mark">S</div>
+          <h4>预约到店面谈</h4>
+          <p>走进 Dior 精品店的私人沙龙。一杯咖啡的时间里，顾问完成肌肤测定与完整推荐。</p>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-bottom: 80px;">
+        <button class="btn btn-fill" id="reveal-btn">
+          <span>将档案交予顾问</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+
+      <!-- 思考过渡 -->
+      <div class="thinking" id="thinking">
+        <div class="brand-init">Lu Chengzhou · Dior Homme Advisor</div>
+        <p>承舟顾问正在仔细翻阅你的档案。<br/>偶尔停下来想一想，偶尔在笔记上写下什么……</p>
+        <div class="think-dots"><i></i><i></i><i></i></div>
+      </div>
+
+      <!-- 推荐揭晓：顾问手写信件 -->
+      <div class="letter-wrap" id="letter">
+        <div class="letter">
+          <div class="letter-head">
+            <div class="l-monogram">✦ CD · Private Recommendation ✦</div>
+            <div class="l-date">24 Août 2026 · Paris & Shanghai</div>
+          </div>
+
+          <h2>亲爱的 访客 先生，</h2>
+
+          <p>
+            我读完了你在档案中写下的一切——<em>你想在这个新篇章里成为的自己</em>，以及那些你不愿意改变的个人风格。
+            这些，比任何一次测肤数据都更珍贵。
+          </p>
+
+          <p>结合你当前的章节（迁居新环境）与现场肤质测定建议，我为你准备了这样一套第一章方案：</p>
+
+          <ul class="rec">
+            <li><b>护肤</b><span>Dior 臻境仪 · A 腔 控油持稳款（都市 / 通勤配方） + B 腔 #01C 自然哑光男士轻妆乳</span></li>
+            <li><b>叠加单品</b><span>Dior Homme Dermo System · 紧致修护精华（夜间密集使用）</span></li>
+            <li><b>香氛</b><span>Dior Sauvage Elixir · 柑橘木质调，呼应你保留的从容气场</span></li>
+            <li><b>配套洗护</b><span>Dior Homme 洁净沐浴露 · 同系列须后乳，维持剃须后的屏障稳定</span></li>
+          </ul>
+
+          <p>
+            接下来的 90 天里，我会一直在这里。<br/>
+            你随时可以上传一张近照、或者只是写下一段话，我会据此判断方案是否需要微调。
+            让你的第一章，从从容容地开始。
+          </p>
+
+          <div class="letter-sign">
+            <div class="sign">——  承舟</div>
+            <div class="sign-role">Lu Chengzhou · Dior Homme 专属私人顾问</div>
+          </div>
+        </div>
+
+        <div class="letter-cta">
+          <a href="purchase.html" class="btn">
+            <span>前往购买</span><span class="arrow">→</span>
+          </a>
+          <a href="tracker.html" class="btn btn-gold">
+            <span>加入年度陪伴计划</span><span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="container">
+      <div class="foot-bot" style="padding-top: 0;">
+        <span>Dior Next Chapter · 私人服务平台原型</span>
+        <span>© Maison Christian Dior</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const optVid = document.getElementById('opt-vid');
+    const optStore = document.getElementById('opt-store');
+    function pickOpt(el) {
+      [optVid, optStore].forEach(o => o.classList.remove('on'));
+      el.classList.add('on');
+    }
+    optVid.addEventListener('click', () => pickOpt(optVid));
+    optStore.addEventListener('click', () => pickOpt(optStore));
+
+    const revealBtn = document.getElementById('reveal-btn');
+    const thinking = document.getElementById('thinking');
+    const letter = document.getElementById('letter');
+    revealBtn.addEventListener('click', () => {
+      if (!optVid.classList.contains('on') && !optStore.classList.contains('on')) {
+        pickOpt(optVid);
+      }
+      revealBtn.style.display = 'none';
+      thinking.classList.add('show');
+      setTimeout(() => {
+        thinking.classList.remove('show');
+        letter.classList.add('show');
+        letter.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 2600);
+    });
+  </script>
+</body>
+</html>

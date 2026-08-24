@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dior Next Chapter · 购买</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@200;300;400;500&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="home.html" class="brand">Dior · <em>Next Chapter</em></a>
+      <ul class="nav-links">
+        <li><a href="home.html">首页</a></li>
+        <li><a href="ai-profile.html">AI 建档</a></li>
+        <li><a href="advisor.html">真人顾问</a></li>
+        <li><a href="purchase.html" class="active">购买</a></li>
+        <li><a href="tracker.html">服务追踪</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-head">
+    <div class="container">
+      <p class="eyebrow">La Boutique Privée · 购买章节</p>
+      <h1 class="h1">郑重地，选择属于你的第一支</h1>
+      <p class="lede center" id="tier-lead">
+        我们将臻境仪、替换芯、会员阶梯与深度顾问服务，整理为一条郑重、克制、没有促销感的购买章节。
+        每一个选项，都是一次关于「你将如何使用时间」的回答。
+      </p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+
+      <!-- 1. 主产品：臻境仪 -->
+      <div class="purchase-block">
+        <div class="pur-fig">
+          <img
+            data-local="assets/img/product-family.jpg"
+            src="assets/img/product-family.jpg"
+            alt="Dior 臻境仪（男士版）主图"
+            onerror="if(!this.dataset.fallback){this.dataset.fallback=1;this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Dior%20Homme%20Next%20Chapter%20mens%20luxury%20dual-chamber%20skincare%20device%20obsidian%20cap%20leather%20strap%20CD%20monogram%20champagne%20gold%20accents%20on%20dark%20slate%20marble%20pedestal%20soft%20moody%20masculine%20editorial%20sauvage%20aesthetic&image_size=landscape_4_3';}" />
+        </div>
+        <div class="pur-info">
+          <p class="eyebrow">Chapter I · 主产品</p>
+          <h2 class="h2">Dior 臻境仪 · 男士版</h2>
+          <div class="price">¥ 3,800</div>
+          <p class="desc">
+            一支瓶子，两个腔体。A 腔男士日常护理、B 腔男士轻妆乳，含首次 AI 建档、Dior Homme 专属真人顾问匹配、专属方案定制与一次顾问回访，约为 90 天的完整陪伴周期。
+          </p>
+          <div class="pur-note">首次购买即开启男士档案。首次顾问沟通将在购买后 48 小时内由你的 Homme 专属顾问主动联系。</div>
+          <div class="tags" style="margin-bottom: 30px;">
+            <span>黑曜石顶盖</span>
+            <span>双腔一体结构</span>
+            <span>男士配方可替换芯</span>
+            <span>90 天服务周期</span>
+          </div>
+          <button class="btn btn-fill"><span>购买 Dior 臻境仪 · 男士版</span><span class="arrow">→</span></button>
+        </div>
+      </div>
+
+      <!-- 2. 替换芯 -->
+      <div class="purchase-block rev">
+        <div class="pur-fig">
+          <img
+            data-local="assets/img/product-detail.jpg"
+            src="assets/img/product-detail.jpg"
+            alt="Dior 臻境仪（男士版）替换芯"
+            onerror="if(!this.dataset.fallback){this.dataset.fallback=1;this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=four%20Dior%20Homme%20Next%20Chapter%20mens%20refill%20cartridges%20masculine%20earthy%20tones%20charcoal%20sage%20sand%20slate%20blue%20black%20and%20gold%20caps%20arranged%20on%20dark%20linen%20champagne%20gold%20accents%20luxury%20male%20skincare%20editorial&image_size=landscape_4_3';}" />
+        </div>
+        <div class="pur-info">
+          <p class="eyebrow">Chapter II · 替换芯</p>
+          <h2 class="h2">章节续写 · 替换芯</h2>
+          <div class="refill-select">
+            <div class="refill-pick on" data-p="660">A 腔 · 环境适配款</div>
+            <div class="refill-pick" data-p="880">B 腔 · 人生节点款</div>
+          </div>
+          <div class="price" id="refill-price">¥ 660 <span style="font-size:15px; color:var(--muted);">/ 支起</span></div>
+          <p class="desc">
+            已拥有臻境仪（男士版）？无需重复完整服务，只需进行需求调整与档案更新。
+            A 腔提供男士日常的不同环境 / 肤质配方；B 腔提供多种男士色号与质感，用于不同章节的上场。
+          </p>
+          <div class="pur-note">购买替换芯将自动触发一次「需求微调研」，顾问根据反馈判断是否需要微调你的第一章方案。</div>
+          <button class="btn btn-gold"><span>购买替换芯</span><span class="arrow">→</span></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. 会员通道与深度服务 阶梯 -->
+  <section>
+    <div class="container">
+      <div class="ladder-head">
+        <p class="eyebrow">Chapter III · Service Ladder</p>
+        <h2 class="h1">同一条服务深度曲线</h2>
+        <p class="lede center">前三档随着消费累计自然解锁；第四档专为"复杂人生变化"而设，由顾问评估后定制开通。<br/>这不是四张互不相干的卡，而是一本章节由浅入深、徐徐展开的书。</p>
+      </div>
+
+      <div class="ladder">
+        <div class="ladder-track">
+          <div class="tier-row">
+            <div class="tier">
+              <div class="stem"></div>
+              <div class="no">Stage · I</div>
+              <div class="name">鎏金会员</div>
+              <div class="range">门槛 ¥ 1,500 消费累计</div>
+              <div class="price">¥ 1,500</div>
+              <div class="cycle">单次服务周期</div>
+              <ul>
+                <li>一次完整 AI 建档</li>
+                <li>一次顾问方案定制</li>
+                <li>不含长期回访</li>
+                <li>Dior 其他产品消费累计，自动达到</li>
+              </ul>
+              <button class="btn">查看权益</button>
+              <div class="tagline">消费累计 · 自动解锁</div>
+            </div>
+
+            <div class="tier">
+              <div class="stem"></div>
+              <div class="no">Stage · II</div>
+              <div class="name">玫瑰金会员</div>
+              <div class="range">门槛 ¥ 6,500 消费累计</div>
+              <div class="price">¥ 6,500</div>
+              <div class="cycle">季度服务周期 · 每 3 个月</div>
+              <ul>
+                <li>鎏金会员全部权益</li>
+                <li>每季度一次顾问回访</li>
+                <li>方案每季度调整一次</li>
+                <li>新品替换芯优先体验</li>
+              </ul>
+              <button class="btn">查看权益</button>
+              <div class="tagline">消费累计 · 自动解锁</div>
+            </div>
+
+            <div class="tier">
+              <div class="stem"></div>
+              <div class="no">Stage · III</div>
+              <div class="name">铂金会员</div>
+              <div class="range">门槛 ¥ 25,000 消费累计</div>
+              <div class="price">¥ 25,000</div>
+              <div class="cycle">半年服务周期 · 每 6 个月</div>
+              <ul>
+                <li>玫瑰金会员全部权益</li>
+                <li>每半年一次深度顾问回访</li>
+                <li>更高频的方案跟进</li>
+                <li>年度优先预约到店</li>
+                <li>限量新品优先预留</li>
+              </ul>
+              <button class="btn btn-gold">查看权益</button>
+              <div class="tagline">消费累计 · 自动解锁</div>
+            </div>
+
+            <div class="tier top">
+              <div class="stem"></div>
+              <div class="no">Stage · IV</div>
+              <div class="name">深度顾问年度服务</div>
+              <div class="range">主动申请 · 顾问评估定制</div>
+              <div class="price">¥ 8,000 – 15,000 <span style="font-size:14px; color: var(--gold-soft);">/ 年</span></div>
+              <div class="cycle">全年陪伴 · 年度服务周期</div>
+              <ul>
+                <li>专为复杂人生变化定制</li>
+                <li>全年顾问随时响应陪伴</li>
+                <li>跨章节方案全流程管理</li>
+                <li>独立于消费累计额度之外</li>
+                <li>顾问评估后开通 · 非按额度自动升级</li>
+              </ul>
+              <a href="tracker.html" class="btn btn-gold" style="background: transparent;"><span>了解并申请</span><span class="arrow">→</span></a>
+              <div class="tagline">顾问评估 · 定制开通</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="container">
+      <div class="foot-top">
+        <div>
+          <div class="brand">Dior · <em>Next Chapter</em></div>
+          <p class="foot-tagline">「选择一个购买方案，从来不是选择一件商品，而是选择一段陪伴的深度。愿你选择的，正是你此刻需要的章节。」</p>
+        </div>
+        <div>
+          <h5>章节导航</h5>
+          <ul class="foot-links">
+            <li><a href="home.html">首页</a></li>
+            <li><a href="ai-profile.html">AI 建档</a></li>
+            <li><a href="advisor.html">真人顾问</a></li>
+            <li><a href="purchase.html">购买</a></li>
+            <li><a href="tracker.html">服务追踪与年度计划</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>礼遇说明</h5>
+          <ul class="foot-links">
+            <li>会员权益细则</li>
+            <li>档案与隐私政策</li>
+            <li>到店面谈预约</li>
+            <li>退换与芯体回收</li>
+            <li>联系客服</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bot">
+        <span>Dior Next Chapter · 私人服务平台原型</span>
+        <span>© Maison Christian Dior</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 根据 URL 参数 tier 显示会员等级欢迎语
+    const url = new URL(location.href);
+    const tier = url.searchParams.get('tier') || sessionStorage.getItem('dnc_tier');
+    const lead = document.getElementById('tier-lead');
+    const tierMap = {
+      gold: '鎏金会员',
+      rosegold: '玫瑰金会员',
+      platinum: '铂金会员'
+    };
+    if (tier && tierMap[tier]) {
+      lead.innerHTML = '我们已同步您的 Dior 会员积分。根据当前等级，您为 <b class="gold" style="font-weight:400;">' + tierMap[tier] + '</b>。下文为您推荐与当前等级相匹配的方案章节。';
+    }
+
+    // 替换芯价格切换
+    document.querySelectorAll('.refill-pick').forEach(p => {
+      p.addEventListener('click', () => {
+        document.querySelectorAll('.refill-pick').forEach(x => x.classList.remove('on'));
+        p.classList.add('on');
+        const pr = p.dataset.p;
+        document.getElementById('refill-price').innerHTML =
+          '¥ ' + pr + ' <span style="font-size:15px; color:var(--muted);">/ 支</span>';
+      });
+    });
+  </script>
+</body>
+</html>
