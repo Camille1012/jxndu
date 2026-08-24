@@ -5,3 +5,8 @@ serveo-tunnel.log
 .cf-tunnel.log
 *.log
 Thumbs.db
+ssh.err
+ssh.out
+serveo-url.txt
+push.log
+push2.log
